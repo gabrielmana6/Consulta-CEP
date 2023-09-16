@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CepModule } from './cep/cep.module';
 import { HttpClientModule } from '@angular/common/http';
+import { EnderecoModule } from './endereco/endereco.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CepModule,
-    HttpClientModule
+    HttpClientModule,
+    EnderecoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

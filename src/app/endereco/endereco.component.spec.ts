@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CepComponent } from './cep.component';
+import { EnderecoComponent } from './endereco.component';
 
-describe('CepComponent', () => {
-  let component: CepComponent;
-  let fixture: ComponentFixture<CepComponent>;
+describe('EnderecoComponent', () => {
+  let component: EnderecoComponent;
+  let fixture: ComponentFixture<EnderecoComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CepComponent]
+      declarations: [EnderecoComponent]
     });
-    fixture = TestBed.createComponent(CepComponent);
+    fixture = TestBed.createComponent(EnderecoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
