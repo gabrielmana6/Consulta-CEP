@@ -1,7 +1,7 @@
 <div>
     <label for="cep">CEP: </label>
-    <input type="text">
-    <button (click)="buscarCep()">Consultar</button>
+    <input type="text" [(ngModel)]="endereco.cep">
+    <button (click)="consultarCep()">Consultar</button>
 </div>
 <div>
     <p *ngIf="consultaRealizada">O botão foi apertado.</p>

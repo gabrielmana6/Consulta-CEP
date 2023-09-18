@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 export class EnderecoService {
 
   url = 'https://viacep.com.br/ws/';
-  //url = 'https://viacep.com.br/ws/01001000/json/';
+  jsonFormat = '/json/';
   constructor(private http: HttpClient) { }
 
-  buscarCep(): Observable<any> {
-    return this.http.get('https://viacep.com.br/ws/01001000/json/');
+  consultarCep(cep: string): Observable<any> {
+    return this.http.get(this.url + cep + this.jsonFormat);
   }
 }

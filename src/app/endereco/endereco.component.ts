@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Endereco } from '../model/Endereco';
 import { EnderecoService } from '../shared/services/endereco/endereco.service';
 
+
 @Component({
   selector: 'app-endereco',
   templateUrl: './endereco.component.html',
@@ -12,11 +13,11 @@ export class EnderecoComponent {
   consultaRealizada = false;
 
   constructor(private enderecoService: EnderecoService){
-    this.endereco = new Endereco;
+    this.endereco = new Endereco();
   }
 
-  buscarCep(){
-    this.enderecoService.buscarCep().subscribe(
+  consultarCep(){
+    this.enderecoService.consultarCep(this.endereco.cep).subscribe(
       data =>  {
         console.log(data)
       }
