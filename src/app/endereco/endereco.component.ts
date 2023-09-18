@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Endereco } from '../model/Endereco';
+import { EnderecoService } from '../shared/services/endereco/endereco.service';
 
 @Component({
   selector: 'app-endereco',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./endereco.component.scss']
 })
 export class EnderecoComponent {
+  endereco: Endereco;
+  consultaRealizada = false;
 
+  constructor(private enderecoService: EnderecoService){
+    this.endereco = new Endereco;
+  }
+
+  buscarCep(){
+    this.enderecoService.buscarCep().subscribe(
+      data =>  {
+        console.log(data)
+      }
+    )
+    this.consultaRealizada = true;
+  }
 }

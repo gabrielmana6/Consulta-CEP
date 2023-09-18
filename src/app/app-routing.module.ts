@@ -4,7 +4,7 @@ import { EnderecoComponent } from './endereco/endereco.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'consultar-endereco',
     component: EnderecoComponent
   }
 ];

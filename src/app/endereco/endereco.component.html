@@ -1,1 +1,8 @@
-<p>endereco works!</p>
+<div>
+    <label for="cep">CEP: </label>
+    <input type="text">
+    <button (click)="buscarCep()">Consultar</button>
+</div>
+<div>
+    <p *ngIf="consultaRealizada">O botão foi apertado.</p>
+</div>
