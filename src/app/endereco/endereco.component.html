@@ -4,5 +4,16 @@
     <button (click)="consultarCep()">Consultar</button>
 </div>
 <div>
-    <p *ngIf="consultaRealizada">O botão foi apertado.</p>
+    <ul *ngIf="consultaRealizada">
+        <li><strong>CEP:</strong> {{ endereco.cep }}</li>
+        <li><strong>Logradouro:</strong> {{ endereco.logradouro }}</li>
+        <li><strong>Complemento:</strong> {{ endereco.complemento }}</li>
+        <li><strong>Bairro:</strong> {{ endereco.bairro }}</li>
+        <li><strong>Localidade:</strong> {{ endereco.localidade }}</li>
+        <li><strong>UF:</strong> {{ endereco.uf }}</li>
+        <li><strong>IBGE:</strong> {{ endereco.ibge }}</li>
+        <li><strong>GIA:</strong> {{ endereco.gia }}</li>
+        <li><strong>DDD:</strong> {{ endereco.ddd }}</li>
+        <li><strong>SIAFI:</strong> {{ endereco.siafi }}</li>
+    </ul>
 </div>

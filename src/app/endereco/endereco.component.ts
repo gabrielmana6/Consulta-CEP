@@ -19,7 +19,7 @@ export class EnderecoComponent {
   consultarCep(){
     this.enderecoService.consultarCep(this.endereco.cep).subscribe(
       data =>  {
-        console.log(data)
+        this.endereco = data;
       }
     )
     this.consultaRealizada = true;
